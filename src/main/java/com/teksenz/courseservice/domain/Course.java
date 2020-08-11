@@ -2,9 +2,9 @@ package com.teksenz.courseservice.domain;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -23,7 +23,8 @@ public class Course extends BaseEntity{
     private Timestamp expectedEndDate;
     @Column(nullable = false)
     private CourseState courseState;
-
+    @OneToMany(mappedBy = "course", fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    private List<FeePaymentSchedule> feePaymentSchedules;
     @Builder
     public Course(UUID id, Long version, Timestamp createdDate, Timestamp lastModifiedDate, String title, Float fee, Timestamp startDate, Timestamp expectedEndDate, CourseState courseState) {
         super(id, version, createdDate, lastModifiedDate);
