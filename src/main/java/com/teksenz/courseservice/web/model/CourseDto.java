@@ -1,10 +1,7 @@
 package com.teksenz.courseservice.web.model;
 
 import com.teksenz.courseservice.domain.CourseState;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Null;
@@ -27,7 +24,7 @@ public class CourseDto extends BaseDto{
     private OffsetDateTime startDate;
     private OffsetDateTime expectedEndDate;
     private CourseState courseState;
-
+    @Builder
     public CourseDto(@Null UUID id, @Null Long version, @Null OffsetDateTime createdDate, @Null OffsetDateTime lastModifiedDate, String title, String description, Float fee, OffsetDateTime startDate, OffsetDateTime expectedEndDate, CourseState courseState) {
         super(id, version, createdDate, lastModifiedDate);
         this.title = title;
