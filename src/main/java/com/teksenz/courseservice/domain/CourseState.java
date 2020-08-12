@@ -1,7 +1,8 @@
 package com.teksenz.courseservice.domain;
 
 public enum CourseState {
-    NOT_STARTED,
+    INACTIVE,
+    ENROLLMENT,
     IN_PROGRESS,
     COMPLETED
 }

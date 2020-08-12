@@ -18,7 +18,6 @@ public class FeePaymentSchedule extends BaseEntity{
     private Integer installmentNo;
     @Column(nullable = false)
     private Timestamp dueDate;
-    @Column(nullable = false)
     @ManyToOne
     private Course course;
     @Builder

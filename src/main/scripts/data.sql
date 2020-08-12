@@ -1,0 +1,2 @@
+--insert into course ('id','version','created_date','last_modified_date','title', 'fee', 'start_date', 'expected_end_date', 'course_state')
+--values ();
