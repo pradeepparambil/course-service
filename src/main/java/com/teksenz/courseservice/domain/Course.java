@@ -9,11 +9,11 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.UUID;
 
-@Entity
 @ToString(callSuper = true)
+@NoArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
+@Entity
 public class Course extends BaseEntity{
     @Column(nullable = false)
     private String title;

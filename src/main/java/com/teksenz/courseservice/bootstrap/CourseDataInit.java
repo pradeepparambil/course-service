@@ -49,6 +49,8 @@ public class CourseDataInit implements CommandLineRunner {
         courseRepository.save(courseBatch18);
         courseRepository.save(courseBatch19);
         courseRepository.save(courseBatch20);
+
         log.info(String.valueOf("Number of courses : "+courseRepository.count()));
+
     }
 }
