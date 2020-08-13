@@ -6,12 +6,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Null;
+import java.io.Serializable;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BaseDto {
+public class BaseDto implements Serializable {
     @Null
     private UUID id;
     @Null
