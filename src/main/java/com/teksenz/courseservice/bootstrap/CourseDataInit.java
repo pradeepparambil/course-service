@@ -17,7 +17,10 @@ public class CourseDataInit implements CommandLineRunner {
     private final CourseRepository courseRepository;
     @Override
     public void run(String... args) throws Exception {
-        loadCourses();
+        if(courseRepository.count() == 0){
+            loadCourses();
+        }
+
     }
 
     private void loadCourses() {
