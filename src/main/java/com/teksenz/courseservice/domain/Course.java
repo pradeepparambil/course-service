@@ -22,10 +22,11 @@ public class Course extends BaseEntity{
     @Column(nullable = false)
     private Float fee;
     @Column(nullable = false)
-    private Timestamp startDate;
+    private Timestamp startDate; 
     @Column(nullable = false)
     private Timestamp expectedEndDate;
     @Column(nullable = false)
+//    @Enumerated(EnumType.STRING)
     private CourseState courseState;
     @OneToMany(mappedBy = "course")
     private List<FeePaymentSchedule> feePaymentSchedules;
