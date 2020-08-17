@@ -14,7 +14,11 @@
 	<description>course service</description>
 
 	<dependencies>
-
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<version>2.2.3.RELEASE</version>
+		</dependency>
 	</dependencies>
 
 
